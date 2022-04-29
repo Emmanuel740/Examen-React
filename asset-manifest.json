@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Examen-React/static/css/main.7d6e7244.css",
-    "main.js": "/Examen-React/static/js/main.c2212482.js",
+    "main.css": "/Examen-React/static/css/main.65a24681.css",
+    "main.js": "/Examen-React/static/js/main.c998d930.js",
     "static/js/787.ae85629d.chunk.js": "/Examen-React/static/js/787.ae85629d.chunk.js",
     "static/media/logo.svg": "/Examen-React/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/Examen-React/index.html",
-    "main.7d6e7244.css.map": "/Examen-React/static/css/main.7d6e7244.css.map",
-    "main.c2212482.js.map": "/Examen-React/static/js/main.c2212482.js.map",
+    "main.65a24681.css.map": "/Examen-React/static/css/main.65a24681.css.map",
+    "main.c998d930.js.map": "/Examen-React/static/js/main.c998d930.js.map",
     "787.ae85629d.chunk.js.map": "/Examen-React/static/js/787.ae85629d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7d6e7244.css",
-    "static/js/main.c2212482.js"
+    "static/css/main.65a24681.css",
+    "static/js/main.c998d930.js"
   ]
 }
