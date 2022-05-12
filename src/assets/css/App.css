@@ -243,9 +243,16 @@ body {
 
 .btn-success{
   background: rgb(23, 150, 19);
+  float: right;
+
+}
+.btn-success2{
+  background: rgb(23, 150, 19);
+
 }
 .btn-warnning{
   background: rgb(218, 49, 49);
+  float: right;
 }
 
 .btn-success:hover{

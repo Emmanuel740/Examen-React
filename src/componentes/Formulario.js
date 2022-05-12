@@ -1,17 +1,22 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { fields } from "../Golbal/fields";
 import Header from "./Header";
+import Context from "../context/context";
 
 export const Formulario = () => {
-    const [campos, setCampos] = useState(fields);
+    const cam = [];
     const [componente, setComponente] = useState('');
     const [label, setLabel] = useState('');
     const [type, setType] = useState('');
 
+    const {contextCampos, actualizarCampos} = useContext(Context)
+    const [campos, setCampos] = useState(contextCampos);
+
     useEffect(() => {
         console.log('renderizo campos')
+        console.log(contextCampos)
+    }, [contextCampos]);
 
-    }, [campos]);
     const recibirFormulario = (e) => {
         e.preventDefault();
         let campo = {
@@ -21,7 +26,6 @@ export const Formulario = () => {
             uuid: 1
         }
         setCampos([...campos, campo])
-        // console.log(componente)
     }
     const cambiaComponente = (e) => {
         e.preventDefault();
@@ -41,24 +45,20 @@ export const Formulario = () => {
     }
     const borrarCampo = (e, posicion) => {
         e.preventDefault();
-        console.log('entro borrar')
-
-        console.log(campos[posicion])
         let newCampos = campos
         newCampos.splice(posicion, 1)
-        console.log(posicion)
-        console.log('nuevo Campos')
-
+        // setCampos()
         console.log(newCampos)
         setCampos(newCampos)
-
+    }
+    const submitprueba = (e) => {
+        e.preventDefault();
 
     }
-
     return (
         <div>
-            <Header/>
-            <br/>
+            <Header />
+            <br />
             <h1 className="subHeader">Agregar un campo</h1>
             <form className="mid-form" onSubmit={recibirFormulario}>
                 <div className="form-group">
@@ -73,12 +73,12 @@ export const Formulario = () => {
 
                 <div className="form-group">
                     <label htmlFor="tipo">Tipo</label>
-                    <br/>
+                    <br />
 
                 </div>
                 <div className="form-group radibuttons" name="tipo">
-                    <input className="radioBtn" type="radio" name="tipo" value="text" onChange={cambiaTipo} /> Text
-                    <input className="radioBtn"type="radio" name="tipo" value="submit" onChange={cambiaTipo} /> Submit
+                    <input className="radioBtn" type="radio" name="tipo" value="text" onChange={cambiaTipo} htmlFor="tipo" /> Text
+                    <input className="radioBtn" type="radio" name="tipo" value="submit" onChange={cambiaTipo} htmlFor="tipo" /> Submit
                 </div>
 
 
@@ -87,30 +87,47 @@ export const Formulario = () => {
                 <input type="submit" value="Agregar" className="btn btn-success" />
 
             </form>
+            <div className="clearfix"></div>
             <h1 className="subHeader">Campos Agregados</h1>
             <form className="mid-form">
-
                 {
+
                     campos.map((campo, i) => {
                         return (
                             <div className="form-group" key={i}>
                                 {
-                                    campo.type === 'text'
-                                        ?
-                                        // <input type={campo.type} name={campo.componente} onChange={cambiaComponente} />
-                                        <span>
-                                            <label htmlFor="nombre">{campo.label}</label>
-                                            <input type={campo.type} name={campo.componente}  />
-                                        </span>
-                                        :
-                                        <input className="btn btn-success" type={campo.type} name={campo.componente} value={campo.label} onChange={cambiaComponente} />
+                                    campo.type === 'text' &&
+
+                                    // <input type={campo.type} name={campo.componente} onChange={cambiaComponente} />
+                                    <span>
+                                        <label htmlFor="nombre">{campo.label}</label>
+                                        <input type={campo.type} name={campo.componente} />
+                                    </span>
 
                                 }
+                                {
+                                    campo.type === 'submit' &&
+                                    <span>
+                                        <br />
+                                        <input className="btn btn-success2" type={campo.type} name={campo.componente} value={campo.label} onClick={submitprueba} />
+                                        <br />
+
+                                    </span>
+                                }
+                                <div className="clearfix"></div>
+
                                 <button onClick={(e) => borrarCampo(e, i)} className="btn btn-warnning">Borrar</button>
+                                <div className="clearfix"></div>
+                                <br />
+
+                                <hr />
                             </div>
                         )
                     })
+
+
                 }
+
             </form>
 
         </div>
