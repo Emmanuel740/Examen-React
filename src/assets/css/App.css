@@ -243,9 +243,17 @@ body {
 
 .btn-success{
   background: rgb(23, 150, 19);
+  float: right;
+  width: 100px;
+  margin-top: 10px;
 }
 .btn-warnning{
   background: rgb(218, 49, 49);
+  float: right;
+  width: 100px;
+  margin-top: 10px;
+
+
 }
 
 .btn-success:hover{
