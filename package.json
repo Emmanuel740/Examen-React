@@ -1,17 +1,25 @@
 {
+<<<<<<< HEAD
   "homepage":"https://Emmanuel740.github.io/Examen-React" ,
+=======
+  "homepage": "https://Emmanuel740.github.io/Examen-React",
+>>>>>>> e8716ab211ada08875343f63c55145199c5a28ce
   "name": "examenkosmos",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@apollo/client": "^3.6.2",
     "@headlessui/react": "^1.6.0",
     "@heroicons/react": "^1.0.6",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
     "@testing-library/user-event": "^13.5.0",
+    "gh-pages": "^3.2.3",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "react-redux": "^8.0.1",
     "react-scripts": "5.0.1",
+    "redux": "^4.2.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -41,7 +49,11 @@
     ]
   },
   "devDependencies": {
+<<<<<<< HEAD
     "gh-pages": "^3.2.3",
+=======
+    "redux-devtools": "^3.7.0",
+>>>>>>> e8716ab211ada08875343f63c55145199c5a28ce
     "tailwindcss": "^3.0.24"
   }
 }
