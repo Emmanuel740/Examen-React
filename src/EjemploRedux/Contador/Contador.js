@@ -11,7 +11,7 @@ export const Contador = () =>{
         <h1>Contador</h1>
         <nav>
             <button onClick={() => dispatch({type: INCREMENT, sumar})}>+1</button>
-            <button onClick={() => dispatch({type: INCREMENT_5, sumar_5})}>5</button>
+            <button onClick={() => dispatch({type: INCREMENT_5})}>5</button>
             <button onClick={() => dispatch({type: DECREMENT, restar})}>-1</button>
             <button onClick={() => dispatch({type: RESET, reset})}>Resetear</button>
             <h3>{state.contador}</h3>

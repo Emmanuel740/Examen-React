@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
-  "homepage":"https://Emmanuel740.github.io/Examen-React" ,
-=======
   "homepage": "https://Emmanuel740.github.io/Examen-React",
->>>>>>> e8716ab211ada08875343f63c55145199c5a28ce
   "name": "examenkosmos",
   "version": "0.1.0",
   "private": true,
@@ -49,11 +45,7 @@
     ]
   },
   "devDependencies": {
-<<<<<<< HEAD
-    "gh-pages": "^3.2.3",
-=======
     "redux-devtools": "^3.7.0",
->>>>>>> e8716ab211ada08875343f63c55145199c5a28ce
     "tailwindcss": "^3.0.24"
   }
 }

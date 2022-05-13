@@ -244,27 +244,16 @@ body {
 .btn-success{
   background: rgb(23, 150, 19);
   float: right;
-<<<<<<< HEAD
-
-}
-.btn-success2{
-  background: rgb(23, 150, 19);
-
-=======
   width: 100px;
   margin-top: 10px;
->>>>>>> e8716ab211ada08875343f63c55145199c5a28ce
 }
 .btn-warnning{
   background: rgb(218, 49, 49);
   float: right;
-<<<<<<< HEAD
-=======
   width: 100px;
   margin-top: 10px;
 
 
->>>>>>> e8716ab211ada08875343f63c55145199c5a28ce
 }
 
 .btn-success:hover{
