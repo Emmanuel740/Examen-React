@@ -1,13 +1,14 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { BORRAR_USUARIO } from '../Types/types';
 
 export const MostrarCampos = () => {
     const state = useSelector(state => state)
     const dispatch = useDispatch()
 
     const borrarCampo = (e, posicion) => {
-        console.log('borrar', posicion)
         e.preventDefault();
+        dispatch({type: BORRAR_USUARIO, posicion})
     }
     return (
         <div>
