@@ -1,12 +1,13 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-
+import FormularioComponent2 from '../FormularioComponent2/FormularioComponent2';
 export const MostrarCampos = () => {
     const state = useSelector(state => state)
     const dispatch = useDispatch()
 
     const borrarCampo = (e, posicion) => {
         console.log('borrar', posicion)
+        dispatch({type: "BORRAR_USUARIO", payload: posicion})
         e.preventDefault();
     }
     return (
@@ -36,6 +37,7 @@ export const MostrarCampos = () => {
                     })
                 }
             </form>
+            <FormularioComponent2 />
         </div>
 
     )

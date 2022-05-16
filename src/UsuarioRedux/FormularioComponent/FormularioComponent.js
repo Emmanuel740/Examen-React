@@ -7,15 +7,16 @@ import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import { GUARDAR_USUARIO } from '../Types/types';
 import { MostrarCampos } from './MostrarCampos';
+import { Reducer } from 'redux';
 
 export const FormularioComponent = () => {
     const dispatch = useDispatch()
-
+    
     const [campos, setCampos] = useState([]);
     const [componente, setComponente] = useState('');
     const [label, setLabel] = useState('');
     const [type, setType] = useState('');
-
+    const [variable, setVariable] = React.useState('Hola')
     useEffect(() => {
         console.log(campos)
 
@@ -29,7 +30,7 @@ export const FormularioComponent = () => {
             uuid: 1
         }
         // setCampos([...campos, campo])
-        dispatch({type: GUARDAR_USUARIO, payload: campo})
+        dispatch({type: "GUARDAR_USUARIO", payload: campo})
     }
     const cambiaComponente = (e) => {
         e.preventDefault();
@@ -47,6 +48,7 @@ export const FormularioComponent = () => {
         setType(e.target.value)
 
     }
+    
     
     
 
@@ -82,6 +84,8 @@ export const FormularioComponent = () => {
 
             </form>
             <h1 className="subHeader">Campos Agregados</h1>
+            <h1 className="subHeader">{variable}</h1>
+
             <MostrarCampos />
 
         </div>
