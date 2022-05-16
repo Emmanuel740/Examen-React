@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { BORRAR_USUARIO } from '../../UsuarioRedux/Types/types';
 import { reset, restar, sumar, sumar_5 } from '../Actions/contadorActions';
 import { DECREMENT, INCREMENT, INCREMENT_5, RESET } from '../Types';
-import { Reducer } from 'redux';
 
 export const Contador2 = () => {
     const state = useSelector(state => state)
@@ -14,7 +13,7 @@ export const Contador2 = () => {
     }
     return (
         <div>
-            <h1>Contador</h1>
+            <h1 style={{color: 'green'}}>Contador 2</h1>
             <nav>
                 <button onClick={() => dispatch({ type: INCREMENT, payload: 1 })}> +1 </button>
                 <button onClick={() => dispatch({ type: INCREMENT_5, payload: 5 })}> 5 </button>

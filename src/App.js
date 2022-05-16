@@ -7,17 +7,19 @@ import { Contador } from './EjemploRedux/Contador/Contador';
 import { Contador2 } from './EjemploRedux/Contador/Contador2';
 import { MostrarContador } from './EjemploRedux/MostrarContador/MostrarContador';
 import { FormularioComponent } from './UsuarioRedux/FormularioComponent/FormularioComponent';
+import FormularioComponent2 from './UsuarioRedux/FormularioComponent2/FormularioComponent2';
+
 function App() {
   return (
     <Provider store={store}>
             <Contador />
-            <Contador2 />
+            {/* <Contador2 /> */}
 
-            <FormularioComponent />
+            {/* <FormularioComponent /> */}
+            <FormularioComponent2 />
+
     </Provider>
-    // <Provider store={store}>
-    //   <MostrarContador />
-    // </Provider>
+    
   );
 }
 
