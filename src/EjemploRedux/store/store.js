@@ -3,6 +3,6 @@ import reducer from '../Reducers'
 
 const store = createStore(reducer)
 
-store.subscribe(() => console.log(store))
+// store.subscribe((str) => console.log(str))
 
 export default store;

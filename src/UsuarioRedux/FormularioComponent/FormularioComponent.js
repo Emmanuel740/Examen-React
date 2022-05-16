@@ -50,8 +50,11 @@ export const FormularioComponent = () => {
     }
     
     
+<<<<<<< HEAD
     
 
+=======
+>>>>>>> 040683f4e960bdab53167a2ea4e05bc70c81d338
     return (
         <div>
             <br/>
